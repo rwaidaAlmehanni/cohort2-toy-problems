@@ -17,11 +17,13 @@
 * rockPaperScissors(5); // => [['rock', 'rock', 'rock', 'rock', 'rock'], etc...]
 *
 */
-function sahar(n){
+function rsp(n){
 	var x=['rock','scissors','paper'];
 	if(n>3){
       for(var i=0;i<n-3;i++){
-      	x.push(x[i]);
+      	if(x[i]===undefined){
+      	x.push(x[i]);	
+      	}	
       }
 	}
 	for(var i=0;i<n;i++){

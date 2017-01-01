@@ -40,30 +40,37 @@ function convert(arr){
 		t=arr[i];
 		arr[i]=arr[l-1];
 		arr[l-1]=t;
-        result+=arr.join("")+" ";
+        result+=" "+arr.join("")+" ";
 	}
 	return result.slice(0,-1);
 };
-function allAnagrams2(string){
+//_______________________________________________________
+function allAnagramsX(string){
 	var arr=string.split(""),result=[],s="",a=[];
+	var b=arr;
 	var l=arr.length;
 	s=convert(arr);
 	a=s.split(" ");
     for(var i=0;i<a.length;i++){
          	result.push(a[i]);
          }
-	for(var j=1;j<l;j++){
+	for(var j=l-1;j>0;j--){
          t=arr[j];
          arr.splice(j,1);
          arr.unshift(t);
+         console.log(arr,t)
          s=convert(arr);
          a=s.split(" ");
          for(var i=0;i<a.length;i++){
          	result.push(a[i]);
-         }
-         
+         } 
 	}
+	for(var k=0;k<result.length;k++){
+		if(result[k]===""){
+		result.splice(k,1);
+	      }
+	}
+	
 	return result.sort();
-
 }
 //_________________________________________
