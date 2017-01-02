@@ -25,6 +25,20 @@
  */
 
  var balancedParens = function (input) {
-	
+ 	var l=0,arr=[];
+ 	for(var i=0;i<input.length;i++){
+ 		if(input[i]==="(" || input[i]===")" || input[i]==="{" ||input[i]==="}"||input[i]==="[" || input[i]==="]"){
+ 			arr.push(input[i]);
+ 		}
+ 	}
+ 	input=arr.join("");
+ 	l=input.length;
+ 	while(l/2){
+ 		input=input.replace(/\(\)|\{\}|\[\]/g,'');
+ 			--l;
+ 	}
+ 	
+ 	if(input==="")return true;
+  return false;
  };
 	
