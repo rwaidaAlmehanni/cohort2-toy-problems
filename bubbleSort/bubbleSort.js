@@ -29,10 +29,31 @@
 */
 
 // Feel free to add helper functions if needed
+var swap=function(x,y){
+	var t;
+	t=y;
+	y=x;
+	x=t;
+	return [x,y];
+}
+var bubbleSort=function(array){
+	var arr=[],l;
+	for(var j=0;j<array.length;j++){
+		 l=array.length-1;
+		for(var i=0;i<l;i++){
+			if(array[i]>array[i+1]){
+				arr=swap(array[i],array[i+1])
+				array[i]=arr[0];
+				array[i+1]=arr[1];
+			}
 
-var bubbleSort = function(array) {
-  
-};
+		}
+		
+
+	}
+	return array;
+}
+//time complixty is O(n^2)
 
 /*
 
