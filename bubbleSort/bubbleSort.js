@@ -37,9 +37,9 @@ var swap=function(x,y){
 	return [x,y];
 }
 var bubbleSort=function(array){
-	var arr=[],l;
+	var arr=[],l=array.length;
 	for(var j=0;j<array.length;j++){
-		 l=array.length-1;
+		 --l
 		for(var i=0;i<l;i++){
 			if(array[i]>array[i+1]){
 				arr=swap(array[i],array[i+1])
