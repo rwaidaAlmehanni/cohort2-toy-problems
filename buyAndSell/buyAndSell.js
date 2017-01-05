@@ -27,5 +27,10 @@ function getMinOfArray(numArray) {
 }
 
 var maximumProfit  = function(array) {
-	//your code is here
+	var x=array[array.length-1];
+	var y=getMinOfArray(array);
+	if(x<=y){
+		return 0;
+	}
+	return x-y;
 }
