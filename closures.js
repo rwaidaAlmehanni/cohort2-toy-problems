@@ -33,4 +33,36 @@ myGame.playOneGame();//should return "Game played";
 myGame.playOneGame();//should return "Game played";
 myGame.timeSpentPlaying(); //should return 30;
 myGame.myLevel(); //should return "You need to improve your game"
+
 */
+//closures..............................
+var pow=function(exp){
+	return function(n){
+		return Math.pow(n,exp);
+
+	}
+}
+//pingPongTracker.......................
+var pingPongTracker=function(){
+	var totalTime=0;
+	return {
+		timeSpentPlaying:function(){
+			return totalTime;
+		},
+		playOneGame:function(){
+			totalTime+=15;
+			return "Game played";
+		},
+		myLevel:function(){
+			if(totalTime<30){
+				return "I need to improve my game";
+			}
+			else if(totalTime>100){
+				return "Wow, I have wasted a lot of time";
+			}else{
+				return "You need to improve your game";
+			}
+
+		}
+	}
+}
