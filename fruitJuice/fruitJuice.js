@@ -45,6 +45,7 @@ Jar.prototype.getTotalAmount=function(){
     }
   return x;
 }
+//O(n)
 
 /*
 These are some tests:
