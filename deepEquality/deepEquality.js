@@ -11,6 +11,7 @@
   * don't worry about handling cyclical object structures.
   *
   */
+<<<<<<< HEAD
   var getObj=function(obj){
 
   	var s= "";
@@ -47,4 +48,9 @@
   		   }
   	    }
   	return true;
+=======
+
+  var deepEquals = function(obj1, obj2){
+
+>>>>>>> 1ab6029e2b0ea9577ff72d4c21a7412c9e55a82c
   }
