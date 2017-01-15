@@ -21,7 +21,7 @@ Complete the functions in order to provide this functionality.
 */
 
 function Jar() {
- this.fruitIn={};
+ this.fruitIn={}; //to collect all of fruit and their amounts...
 }
 Jar.prototype.getConcentration=function(fruit){
 	var sum=0
