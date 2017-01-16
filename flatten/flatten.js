@@ -13,6 +13,7 @@ flatten('a', ['b', 2], 3, null, [[4], ['c']]) // returns ['a', 'b', 2, 3, null, 
 */
 
 function flatten(){
+<<<<<<< HEAD
 	var arr=Array.from(arguments);
 	var result=[];
 	function nested(obj){
@@ -30,3 +31,7 @@ return nested(arr);
 
 }
 //O(n^2)
+=======
+
+}
+>>>>>>> ae4eb3ea71b7d7dbe78fe9f7d97772c1cd6928d1
