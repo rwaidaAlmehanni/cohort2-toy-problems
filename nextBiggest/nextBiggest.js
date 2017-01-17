@@ -35,7 +35,20 @@ rotate(data, 12478) // => [3, 4, 5, 1, 2]
 
 */
 function rotate(array, steps){
-
+	var x;
+	if(steps>0){
+	   for(var i=0;i<steps;i++){
+          array.unshift(array.pop())
+	    }
+	}
+	else if(steps<0){
+		    for(var i=steps;i<0;i++){
+                x=array[0];
+                array=array.slice(1)
+		        array.push(x)
+	           }
+          }
+	return array;
 }
 
 /*
@@ -54,7 +67,28 @@ nextBigger(9)==-1
 nextBigger(111)==-1
 nextBigger(531)==-1
 */
+function createArrStr(n,num){
+	var s=[],arr=num.toString().split(""),l=arr.length;
+	var t=arr,result;
+	for(var i=0;i<=arr.length;i++){
+		var arr=t;
+		//console.log(arr)
+		result.push((arr.splice(i,0,n).join(""))*1);
+	}
+	return result;
+}
 
 function nextBigger(num){
-
+	var s=num.toString(),arr=[],x;
+	if(s.length===1){return -1}
+    for(var i=0;i<s.length;i++){
+    	 arr.concat(createArrStr(s[i],s.slice(i,1)))
+    }
+    var j=arr.indexOf(num);
+    arr=arr.slice(j,1);
+    x=Math.max(...arr)
+   if(x>num){
+   	return x;
+   };
+   return -1;
 }

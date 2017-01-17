@@ -38,20 +38,23 @@
    this.enqueue = function(value){
    	inbox.stack=[];
    	inbox.stack.push(value);
-   for(var i=outbox.stack.length-1;i>0;i--){
+   	if(outbox>0&&inbox===0){
+   for(var i=outbox.stack.length-1;i>=0;i--){
    		inbox.stack.push(outbox.stack.pop());
-   	}
-   //	console.log(inbox.stack)
+   	}}
+   	console.log(inbox.stack)
      
    };
 
    // called to remove an item from the `queue`
    this.dequeue = function(){
-   	outbox.stack=[];
+   	//outbox.stack=[];
+   	if(inbox>0&&outbox===0){
    	for(var i=0;i<inbox.stack.length;i++){
    		outbox.stack.push(inbox.stack.pop());
    	}
-   	//console.log(outbox.stack)
+   }
+   console.log(outbox.stack)
    };
 
    // should return the number of items in the queue
