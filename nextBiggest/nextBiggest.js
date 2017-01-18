@@ -67,28 +67,21 @@ nextBigger(9)==-1
 nextBigger(111)==-1
 nextBigger(531)==-1
 */
-function createArrStr(n,num){
-	var s=[],arr=num.toString().split(""),l=arr.length;
-	var t=arr,result;
-	for(var i=0;i<=arr.length;i++){
-		var arr=t;
-		//console.log(arr)
-		result.push((arr.splice(i,0,n).join(""))*1);
-	}
-	return result;
-}
 
 function nextBigger(num){
-	var s=num.toString(),arr=[],x;
-	if(s.length===1){return -1}
-    for(var i=0;i<s.length;i++){
-    	 arr.concat(createArrStr(s[i],s.slice(i,1)))
-    }
-    var j=arr.indexOf(num);
-    arr=arr.slice(j,1);
-    x=Math.max(...arr)
-   if(x>num){
-   	return x;
-   };
-   return -1;
-}
+	var arr=[],x,z;
+ num=num+"";
+ arr=num.split("");
+//  for(var i=0;i<arr.length;i++){
+//      x=num[i];
+//    for(var j=0;j<num.length;j++){
+//    	     num=num.slice(0,j)+x+num.slice(j)
+//       arr.push(num*1)
+//    }
+//    num=z;
+// }
+// arr.sort();
+// console.log(arr)
+// if(arr[0]>num)return arr[0];
+return -1;
+} 
