@@ -15,6 +15,7 @@
 // list.contains(6);  //yields 'false';
 // list.removeHead(); //yields '4'
 // list.tail.value;   //yields '5';
+<<<<<<< HEAD
 var Node=function(value){
 	var node={}
 	node.value=value;
@@ -56,5 +57,12 @@ LinkedList.prototype.contains=function(target){
 	return f;
 }
 
+=======
+
+
+var LinkedList = function(){
+  //fill me in!
+};
+>>>>>>> 42a961f95ede9dc34c2125c99e247e9b7bf32aad
 
 //write methods here!

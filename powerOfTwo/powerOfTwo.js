@@ -12,16 +12,35 @@ for(var i=0;i<num;i++){
 }
 return result;
 }
-var powerOfTwo2 = function(num){
-var x=Math.pow(2,num);
-var result=1;
-if(num>69){
-var arr="590295810358705700000".split("")*1;
-for(var i=0;i<num;i++){
-	arr[i]=arr[i]*2;
-	if(arr[i]>9)
-		arr.splice(i+1,0,arr[i][1]);
+var powerOf2=function(num){
+	var arr=[1];
+	var carry=0,j=0;
+	for(var i=0;i<num;i++){
+		while(j<arr.length){
+			val=arr[j]*2;
+			arr[j]=(val%2)+carry;
+			carry=Math.floor(val/10);
+			j++;
+			if(j===arr.length&&carry>0){
+				break;
+			}
+		}
+	}
+	return arr.reduce(function(acc,n){
+		acc+=n;
+		return acc;
+	},0)
 }
-}
-return result;
-}
+// var powerOfTwo2 = function(num){
+// var x=Math.pow(2,num);
+// var result=1;
+// if(num>69){
+// var arr="590295810358705700000".split("")*1;
+// for(var i=0;i<num;i++){
+// 	arr[i]=arr[i]*2;
+// 	if(arr[i]>9)
+// 		arr.splice(i+1,0,arr[i][1]);
+// }
+// }
+// return result;
+// }
