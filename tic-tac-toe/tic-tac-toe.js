@@ -49,13 +49,11 @@ function colArray(array){//create array of colums ....
 //_____________________________________________________	
 function rowOrCol(board){
 return board.reduce(function(acc,row){//create object the value is the number of item in row...
-	for(var i=0;i<row.length;i++){
-		if(acc[row[i]]===undefined){
-			acc[row[i]]=1;
-		}
-		else{
-			acc[row[i]]++;
-		}
+	acc[row[0]]=1;
+	for(var i=1;i<row.length;i++){
+		if(acc[row[i]]!==undefined){
+			++acc[row[i]];
+		}	
 	}
 	return acc;
 },{})
@@ -65,13 +63,10 @@ function test(obj){//test the value of every row...
 	var x;
 	console.log(obj)
 	for(var k in obj){
-		if(obj[k]===3){
-			x=(k*1)-1
-			if(x>0 && k!==0){
-			return x;
+		if(obj[k]===3 && k!=='0'){
+			return obj[k];
 			}	
 		}
-	}
 	return -1
 }	
 //______________________________________________	
