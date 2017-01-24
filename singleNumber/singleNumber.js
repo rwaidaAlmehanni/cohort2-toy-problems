@@ -14,6 +14,7 @@ arr = [2,4,3,6,8,2,3,4,8];
 singleNumber(arr);//should return 6 because it only appear once
 */
 function singleNumber(arr){
+<<<<<<< HEAD
     var obj=arr.reduce(function(acc,num){//O(n)
 		if(acc[num]===undefined){
 			acc[num]=1;
@@ -30,6 +31,10 @@ function singleNumber(arr){
 
 }
 //O(n)+O(n)=O(2n)=O(n) linear...
+=======
+
+}
+>>>>>>> 2f38f3c6500ecabfadd14e698d7085c59476511e
 
 /*
 Problem 2 (medium):
@@ -46,6 +51,7 @@ twoSum(nums,9); //should return [0,1] because nums[0] + nums[1] = 2 + 7 = 9;
 */
 
 function twoSum(nums, target){
+<<<<<<< HEAD
 	var sub=0,index;
 	for(var i=0;i<nums.length;i++){//O(n)
 		sub=target-nums[i];
@@ -57,6 +63,10 @@ function twoSum(nums, target){
 
 }
 //O(n^2)
+=======
+
+}
+>>>>>>> 2f38f3c6500ecabfadd14e698d7085c59476511e
 
 /*
 Problem 3 (advanced):
@@ -70,7 +80,12 @@ countAllNumbers(2); //should return 91 because there are 91 numbers that have un
 */
 
 function countAllNumbers(n){
+<<<<<<< HEAD
 	var max=Math.pow(10,n);
     return max-((max/10)-1);
 };
 //O(1)
+=======
+
+};
+>>>>>>> 2f38f3c6500ecabfadd14e698d7085c59476511e
