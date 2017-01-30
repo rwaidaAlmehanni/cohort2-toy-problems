@@ -28,6 +28,7 @@ dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH"]) => [] //don't nee
 */
 
 var dirReduc = function(directions){
+<<<<<<< HEAD
 	var arr=[];
     var obj=directions.reduce(function(acc,dir){//collect all the items in the directions to obj...
 	    if(acc[dir]===undefined){
@@ -54,4 +55,9 @@ return arr;
 }
 //O(n)
 
+=======
+	
+	return directions;
+};
+>>>>>>> d2130e14cb0ab2ec81404accbb5aee359f2349a4
 
