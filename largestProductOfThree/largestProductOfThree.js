@@ -9,7 +9,7 @@
 
 var largestProductOfThree = function(array) {
 	var result=1;
-      array=array.sort();//O(n)
+      array=array.sort(function(a,b){return a-b;});//O(n)
    for(var i=array.length-1; i>=array.length-3; i--){//O(1)
          result*=array[i];
       }
