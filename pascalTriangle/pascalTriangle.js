@@ -25,6 +25,7 @@ buildTriangle(3);// should output [[1],[1,1],[1,2,1]];
 */
 
 var buildTriangle = function(numOfRows){
+<<<<<<< HEAD
 	var arr=[],temp=[];
 	if(numOfRows === 1){
 		arr.push([1]);
@@ -46,4 +47,8 @@ var buildTriangle = function(numOfRows){
 	
 }
 //O(n^2)
+=======
+	
+}
+>>>>>>> 489641d63aec9a4741e9d52eb49286a5629cb485
 		

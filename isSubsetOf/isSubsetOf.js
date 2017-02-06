@@ -23,6 +23,7 @@
 */
 
 Array.prototype.isSubsetOf = function (arr) {
+<<<<<<< HEAD
 	var f=true;
 	for(var i=0;i<this.length;i++){
 		if(arr.indexOf(this[i])<0){
@@ -54,3 +55,7 @@ Array.prototype.isSubsetOf2 = function (arr) {
 		
 	}//O(n^2)
 
+=======
+
+}
+>>>>>>> 489641d63aec9a4741e9d52eb49286a5629cb485
