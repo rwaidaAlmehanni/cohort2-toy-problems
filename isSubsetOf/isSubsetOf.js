@@ -24,6 +24,7 @@
 
 Array.prototype.isSubsetOf = function (arr) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	var f=true;
 	for(var i=0;i<this.length;i++){
 		if(arr.indexOf(this[i])<0){
@@ -59,3 +60,7 @@ Array.prototype.isSubsetOf2 = function (arr) {
 
 }
 >>>>>>> 489641d63aec9a4741e9d52eb49286a5629cb485
+=======
+
+}
+>>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
