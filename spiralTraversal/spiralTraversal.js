@@ -10,7 +10,7 @@
     returns [1, 2, 3, 6, 9, 8, 7, 4, 5]
  */
 
-<<<<<<< HEAD
+
 // var spiralTraversal = function(matrix){
 // 	var arr=matrix[0],j=matrix.length-1,n=1;
 // 	while(n<matrix.length-1){

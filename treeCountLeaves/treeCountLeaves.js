@@ -86,3 +86,4 @@ Tree.prototype.removeChild = function(child){
 	var result=str.replace("{'children':"+ch+"}","");
 	return JSON.parse(result); // the tree after removing the child...
 };
+//

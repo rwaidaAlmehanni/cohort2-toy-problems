@@ -4,7 +4,7 @@
  * a prime number, false if it's not.
  */
 var primeTester = function(n) {
-<<<<<<< HEAD
+
 	if(n===2 || n===3){
 		return true;
 	}
@@ -30,7 +30,7 @@ var inclusive=function(n){
 	return arr;
 =======
 
->>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
+
 }
 
  /* Extra credit: Write a function that generates a list of all prime numbers
