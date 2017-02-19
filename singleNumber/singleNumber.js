@@ -14,7 +14,7 @@ arr = [2,4,3,6,8,2,3,4,8];
 singleNumber(arr);//should return 6 because it only appear once
 */
 function singleNumber(arr){
-<<<<<<< HEAD
+
     var obj=arr.reduce(function(acc,num){//O(n)
 		if(acc[num]===undefined){
 			acc[num]=1;
