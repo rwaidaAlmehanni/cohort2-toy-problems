@@ -64,9 +64,9 @@ pyramid(1666); // should === 16
 
 function pyramid(cans){
 	var counter=0,x;
-	for(var i=1; i<cans; i++){
+	for(var i=1; i<=cans; i++){
          x=i*i;
-		if(x<cans){
+		if(x<=cans){
 		cans=cans-x;
 		++counter;
 		}else{
@@ -74,6 +74,7 @@ function pyramid(cans){
 		}
 		
 	}
+	return counter;
 	
 };//O(n)
 
